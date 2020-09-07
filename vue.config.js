@@ -1,4 +1,5 @@
 module.exports = {
   transpileDependencies: ["vuetify"],
-  publicPath: "portfolio-website"
+  publicPath:
+    process.env.NODE_ENV === "production" ? "/portfolio-website/" : "/",
 };
