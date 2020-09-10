@@ -59,18 +59,7 @@
                 </template>
             </v-flex>
         </v-layout>
-        <!-- <v-layout wrap my-5>
-        <v-flex xs12>
-          <div class="display-1 font-weight-bold">Press</div>
-        </v-flex>
-        <v-flex xs12>
-          <v-layout>
-            <v-card width="">
-              <v-card-title>Press card</v-card-title>
-            </v-card>
-          </v-layout>
-        </v-flex>
-      </v-layout>-->
+
     </v-container>
 </div>
 </template>
