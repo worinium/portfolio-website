@@ -59,7 +59,6 @@
                 </template>
             </v-flex>
         </v-layout>
-
     </v-container>
 </div>
 </template>
@@ -337,31 +336,31 @@ export default {
                 },
                 {
                     name: "LinkedIn",
-                    value: "Uzir Thapa",
+                    value: "Woriayibapri Hearty Alapher",
                     link: "https://www.linkedin.com/wori-hearty/",
                     icon: "mdi-linkedin",
                 },
                 {
                     name: "YouTube",
-                    value: "Uzir Thapa",
+                    value: "Woriayibapri Hearty Alapher",
                     link: "https://www.youtube.com/channel/UC0ZXJAhTh09Fw_nuCJQJILA",
                     icon: "mdi-youtube",
                 },
                 {
                     name: "Github",
-                    value: "uzirthapa",
+                    value: "Woriayibapri Hearty Alapher",
                     link: "https://github.com/worinium/",
                     icon: "mdi-github",
                 },
                 {
                     name: "Facebook",
-                    value: "Uzir Thapa",
+                    value: "Woriayibapri Hearty Alapher",
                     link: "https://www.facebook.com/worinium/",
                     icon: "mdi-facebook",
                 },
                 {
                     name: "Instagram",
-                    value: "@uzir.thapa",
+                    value: "Woriayibapri Hearty Alapher",
                     link: "https://www.instagram.com/worinium/",
                     icon: "mdi-instagram",
                 },

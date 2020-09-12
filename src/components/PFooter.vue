@@ -25,8 +25,8 @@
                 <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/github.png" /></a>
             </div>
         </div>
-        {{ new Date().getFullYear() }} —
-        <strong>Alapher W. Hearty</strong>
+
+        <strong>Copyright © {{ new Date().getFullYear() }} AbadiGIS. All Rights Reserved</strong>
     </div>
 </section>
 </template>
@@ -43,6 +43,21 @@ export default {};
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+p {
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
 }
 
 #footer {
