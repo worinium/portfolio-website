@@ -1,6 +1,6 @@
 <template>
 <div class="home">
-    <v-img dark max-height="500px" src="https://images.unsplash.com/photo-1505238680356-667803448bb6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+    <v-img dark max-height="635px" src="https://images.unsplash.com/photo-1505238680356-667803448bb6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
         <v-layout fill-height align-center>
             <v-container>
                 <v-row align="center" justify="center" class="white--text">
@@ -24,21 +24,35 @@
     </v-img>
     <v-container class="mt-5">
         <v-layout wrap>
-            <v-flex xs12>
-                <div class="display-1 font-weight-bold" id="about">This is me</div>
-            </v-flex>
+            <v-col class="lighten-2 py-5 text-center " cols="12">
+                <v-spacer></v-spacer>
+                <h1 style="color:#800040;" id="about">Statement of Experience</h1>
+                <v-spacer></v-spacer>
+            </v-col>
             <v-flex xs12 mt-5>
-                <div class="body-1">{{ aboutText }}</div>
-                <div class="body-1 mt-3">
-                    Working on starting an app development business and always looking
-                    for new clients! Would love to talk to you about your idea.
-                </div>
+
+                <v-col class="lighten-2 py-1 text-center " cols="12">
+                    <v-hover v-slot:default="{ hover }" open-delay="200">
+                        <v-card :loading="loading" :elevation="hover ? 16 : 2" class="pa-md-4 mx-lg-auto" color="white">
+                            <v-card-text>
+                                <div class="body-1">{{ aboutText }}</div>
+                                <div class="body-1 mt-3">
+                                    Working on starting an app development business and always looking
+                                    for new clients! Would love to talk to you about your idea.
+                                </div>
+                            </v-card-text>
+                        </v-card>
+                    </v-hover>
+                </v-col>
+
             </v-flex>
         </v-layout>
         <v-layout wrap my-5>
-            <v-flex xs12>
-                <div class="display-1 font-weight-bold" id="portfolio">My Work</div>
-            </v-flex>
+            <v-col class="py-4 text-center" cols="12">
+                <v-spacer></v-spacer>
+                <h1 style="color:#800040;" id="portfolio">My Projects Portfolio</h1>
+                <v-spacer></v-spacer>
+            </v-col>
             <v-flex xs12 class="mt-5">
                 <v-layout wrap>
                     <template v-for="(app, i) in apps">
@@ -49,15 +63,18 @@
                 </v-layout>
             </v-flex>
         </v-layout>
-        <v-layout wrap my-5>
-            <v-flex xs12 mb-5>
-                <div class="display-1 font-weight-bold" id="contact">Contact Me</div>
-                <template v-for="(contact, i) in contactLinks">
-                    <v-flex sm6 md4 xs12 :key="i">
-                        <p-contact-info :contact="contact" />
-                    </v-flex>
-                </template>
-            </v-flex>
+        <v-col class="lighten-2 py-2 text-center " cols="12">
+            <v-spacer></v-spacer>
+            <h1 style="color:#800040;" id="contact">Contact Me</h1>
+            <v-spacer></v-spacer>
+        </v-col>
+        <v-layout>
+            <template v-for="(contact, i) in 1">
+                <!-- <template v-for="(contact, i) in contactLinks"> -->
+                <v-flex :key="i">
+                    <p-contact-info :contact="contact" />
+                </v-flex>
+            </template>
         </v-layout>
     </v-container>
 </div>
@@ -77,38 +94,6 @@ export default {
         return {
             aboutText: "I’m a Computer Scientist that is passionate about developing quality software with great innovative skills in solving client’s problems. Hence, over the past 6 years in the IT industry, I have worked as a Media Data Analysis Expert, Production Geology Software Developer, Enterprise GIS Software Developer & Administrator, and Software Engineering Instructor. I have acquired a high level of industrial experience in building well-crafted and easily maintainable small to medium scale applications for deployment on Cloud/Web, Desktop, and Mobile platforms. I also have adequate knowledge in administering Enterprise GIS especially for land Administration and Casdastral, Mapping and Cartography, and Geodesy.",
             apps: [{
-                    name: "Food Vision",
-                    price: "FREE",
-                    logo: "food-vision-logo.png",
-                    platforms: [{
-                        name: "apple",
-                        icon: "mdi-apple",
-                        link: "https://apps.apple.com/us/app/food-vision/id1437083324",
-                    }, ],
-                    description: "One day my friend and I were eating at a restaurant and she suddenly asked me what an item looks like. I looked up at her an told her I didnt know. Then she told me why dont you make an app where you can see the pictures of food thats on the menu? Then I made Food Vision. :)",
-                    technologies: [{
-                            name: "Swift",
-                            icon: "mdi-language-swift",
-                            link: "",
-                        },
-                        {
-                            name: "XCode",
-                            icon: "mdi-apple-ios",
-                            link: "",
-                        },
-                        {
-                            name: "Firebase",
-                            icon: "mdi-firebase",
-                            link: "",
-                        },
-                    ],
-                    code: {
-                        name: "github",
-                        icon: "mdi-github",
-                        link: "",
-                    },
-                },
-                {
                     name: "Media Data App",
                     price: "COMING SOON",
                     logo: "finance-logo.png",
@@ -154,6 +139,39 @@ export default {
                         name: "github",
                         icon: "mdi-github",
                         link: "https://github.com/uzirthapa/finance-app",
+                    },
+                },
+
+                {
+                    name: "BookList App",
+                    price: "FREE",
+                    logo: "food-vision-logo.png",
+                    platforms: [{
+                        name: "apple",
+                        icon: "mdi-apple",
+                        link: "https://apps.apple.com/us/app/food-vision/id1437083324",
+                    }, ],
+                    description: "A Sample implementation of CRUD functionality in using asp.net core with razor, EntityFrameCore Code First and PostgreSQL DBMS ",
+                    technologies: [{
+                            name: "Swift",
+                            icon: "mdi-language-swift",
+                            link: "",
+                        },
+                        {
+                            name: "XCode",
+                            icon: "mdi-apple-ios",
+                            link: "",
+                        },
+                        {
+                            name: "Firebase",
+                            icon: "mdi-firebase",
+                            link: "",
+                        },
+                    ],
+                    code: {
+                        name: "github",
+                        icon: "mdi-github",
+                        link: "",
                     },
                 },
                 {
@@ -226,6 +244,39 @@ export default {
                         link: "https://github.com/uzirthapa/facebook-ui",
                     },
                 },
+
+                {
+                    name: "BookList App",
+                    price: "FREE",
+                    logo: "food-vision-logo.png",
+                    platforms: [{
+                        name: "apple",
+                        icon: "mdi-apple",
+                        link: "https://apps.apple.com/us/app/food-vision/id1437083324",
+                    }, ],
+                    description: "A Sample implementation of CRUD functionality in using asp.net core with razor, EntityFrameCore Code First and PostgreSQL DBMS ",
+                    technologies: [{
+                            name: "Swift",
+                            icon: "mdi-language-swift",
+                            link: "",
+                        },
+                        {
+                            name: "XCode",
+                            icon: "mdi-apple-ios",
+                            link: "",
+                        },
+                        {
+                            name: "Firebase",
+                            icon: "mdi-firebase",
+                            link: "",
+                        },
+                    ],
+                    code: {
+                        name: "github",
+                        icon: "mdi-github",
+                        link: "",
+                    },
+                },
                 {
                     name: "Firebird Fitness",
                     price: "LIVE",
@@ -293,6 +344,39 @@ export default {
                         name: "github",
                         icon: "mdi-github",
                         link: "https://github.com/uzirthapa/ecommerce-skeleton",
+                    },
+                },
+
+                {
+                    name: "BookList App",
+                    price: "FREE",
+                    logo: "food-vision-logo.png",
+                    platforms: [{
+                        name: "apple",
+                        icon: "mdi-apple",
+                        link: "https://apps.apple.com/us/app/food-vision/id1437083324",
+                    }, ],
+                    description: "A Sample implementation of CRUD functionality in using asp.net core with razor, EntityFrameCore Code First and PostgreSQL DBMS ",
+                    technologies: [{
+                            name: "Swift",
+                            icon: "mdi-language-swift",
+                            link: "",
+                        },
+                        {
+                            name: "XCode",
+                            icon: "mdi-apple-ios",
+                            link: "",
+                        },
+                        {
+                            name: "Firebase",
+                            icon: "mdi-firebase",
+                            link: "",
+                        },
+                    ],
+                    code: {
+                        name: "github",
+                        icon: "mdi-github",
+                        link: "",
                     },
                 },
                 {
