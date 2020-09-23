@@ -5,11 +5,8 @@
             <v-container>
                 <v-row align="center" justify="center" class="white--text">
                     <v-col cols="12">
-                        <div :class="{
-                  'display-2 font-weight-bold ': $vuetify.breakpoint.smAndUp,
-                  'title font-weight-bold': $vuetify.breakpoint.smAndDown,
-                }">
-                            Welcome to My Page.
+                        <div :class="{'display-2 font-weight-bold ': $vuetify.breakpoint.smAndUp,'title font-weight-bold': $vuetify.breakpoint.smAndDown, }">
+                            <span style="color:#800040;">Welcome</span> to My Page.
                         </div>
                         <div :class="{
                   headline: $vuetify.breakpoint.smAndUp,
@@ -70,7 +67,6 @@
         </v-col>
         <v-layout>
             <template v-for="(contact, i) in 1">
-                <!-- <template v-for="(contact, i) in contactLinks"> -->
                 <v-flex :key="i">
                     <p-contact-info :contact="contact" />
                 </v-flex>
