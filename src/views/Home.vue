@@ -12,7 +12,7 @@
                   headline: $vuetify.breakpoint.smAndUp,
                   'subtitle-1': $vuetify.breakpoint.smAndDown,
                 }">
-                            I Develop Applicactions and Setup Enterprise GIS.
+                            <span style="color:#800040;">I Develop Applicactions and Setup Enterprise GIS.</span>
                         </div>
                     </v-col>
                 </v-row>
@@ -53,7 +53,7 @@
             <v-flex xs12 class="mt-5">
                 <v-layout wrap>
                     <template v-for="(app, i) in apps">
-                        <v-flex :key="i" xs12 sm6 md4>
+                        <v-flex :key="i" class="mt-5" xs12 sm6 md4>
                             <p-portfolio-app :app="app" />
                         </v-flex>
                     </template>
@@ -66,11 +66,12 @@
             <v-spacer></v-spacer>
         </v-col>
         <v-layout>
-            <template v-for="(contact, i) in 1">
+            <!-- <template v-for="(contact, i) in 1">
                 <v-flex :key="i">
                     <p-contact-info :contact="contact" />
                 </v-flex>
-            </template>
+            </template> -->
+            <PContactInfo />
         </v-layout>
     </v-container>
 </div>
@@ -139,9 +140,10 @@ export default {
                 },
 
                 {
-                    name: "BookList App",
+                    name: "Covid 19 GIS App",
                     price: "FREE",
-                    logo: "food-vision-logo.png",
+                    logo: "covid19.png",
+
                     platforms: [{
                         name: "apple",
                         icon: "mdi-apple",
@@ -171,7 +173,7 @@ export default {
                     },
                 },
                 {
-                    name: "Baguette",
+                    name: "Queue Management System",
                     price: "COMING SOON",
                     logo: "baguette-logo.png",
                     platforms: [{
@@ -237,7 +239,7 @@ export default {
                     code: {
                         name: "github",
                         icon: "mdi-github",
-                        link: "https://github.com/uzirthapa/facebook-ui",
+                        link: "https://github.com/worinium/facebook-clone",
                     },
                 },
 
@@ -248,7 +250,7 @@ export default {
                     platforms: [{
                         name: "apple",
                         icon: "mdi-apple",
-                        link: "https://apps.apple.com/us/app/food-vision/id1437083324",
+                        link: "",
                     }, ],
                     description: "A Sample implementation of CRUD functionality in using asp.net core with razor, EntityFrameCore Code First and PostgreSQL DBMS ",
                     technologies: [{
@@ -274,7 +276,7 @@ export default {
                     },
                 },
                 {
-                    name: "Firebird Fitness",
+                    name: "PhotoShoot GIS Appication",
                     price: "LIVE",
                     logo: "firebird-logo.png",
                     platforms: [{
@@ -302,13 +304,13 @@ export default {
                     code: {
                         name: "github",
                         icon: "mdi-github",
-                        link: "https://github.com/uzirthapa/Firebird-Fitness",
+                        link: "https://github.com/worinium/gis-photo-sharing-app",
                     },
                 },
                 {
-                    name: "Ecommerce Biolerplate",
-                    price: "OPEN SOURCE",
-                    logo: "logo.png",
+                    name: "Music App",
+                    price: "CLOSE SOURCE",
+                    logo: "music2.jpg",
                     platforms: [{
                         name: "web",
                         icon: "mdi-web",
@@ -339,18 +341,18 @@ export default {
                     code: {
                         name: "github",
                         icon: "mdi-github",
-                        link: "https://github.com/uzirthapa/ecommerce-skeleton",
+                        link: "https://github.com/worinium/music-vue",
                     },
                 },
 
                 {
-                    name: "BookList App",
+                    name: "GIS Land Survey App",
                     price: "FREE",
-                    logo: "food-vision-logo.png",
+                    logo: "logo.png",
                     platforms: [{
                         name: "apple",
                         icon: "mdi-apple",
-                        link: "https://apps.apple.com/us/app/food-vision/id1437083324",
+                        link: "",
                     }, ],
                     description: "A Sample implementation of CRUD functionality in using asp.net core with razor, EntityFrameCore Code First and PostgreSQL DBMS ",
                     technologies: [{
@@ -382,7 +384,7 @@ export default {
                     platforms: [{
                         name: "web",
                         icon: "mdi-web",
-                        link: "https://sacred-summits-web.firebaseapp.com/",
+                        link: "",
                     }, ],
                     description: "Sacred Summits was looking for a redesign of their website and they asked me to come up with a sample. This is what I came up with.",
                     technologies: [{
@@ -408,44 +410,8 @@ export default {
                     },
                 },
             ],
-            contactLinks: [{
-                    name: "Email",
-                    value: "alapherwori8g5@gmail.com",
-                    link: "mailto:alapherwori8g5@gmail.com",
-                    icon: "mdi-email",
-                },
-                {
-                    name: "LinkedIn",
-                    value: "Woriayibapri Hearty Alapher",
-                    link: "https://www.linkedin.com/wori-hearty/",
-                    icon: "mdi-linkedin",
-                },
-                {
-                    name: "YouTube",
-                    value: "Woriayibapri Hearty Alapher",
-                    link: "https://www.youtube.com/channel/UC0ZXJAhTh09Fw_nuCJQJILA",
-                    icon: "mdi-youtube",
-                },
-                {
-                    name: "Github",
-                    value: "Woriayibapri Hearty Alapher",
-                    link: "https://github.com/worinium/",
-                    icon: "mdi-github",
-                },
-                {
-                    name: "Facebook",
-                    value: "Woriayibapri Hearty Alapher",
-                    link: "https://www.facebook.com/worinium/",
-                    icon: "mdi-facebook",
-                },
-                {
-                    name: "Instagram",
-                    value: "Woriayibapri Hearty Alapher",
-                    link: "https://www.instagram.com/worinium/",
-                    icon: "mdi-instagram",
-                },
-            ],
-        };
+
+        }
     },
-};
+}
 </script>
