@@ -7,11 +7,11 @@ Please check out the [YouTube Video] () as well if you would like!
 
 ## Project setup
 ```
-yarn install
-yarn run serve
-yarn run build
-yarn run test
-yarn run lint
+npm install
+npm run serve
+npm run build
+npm run test
+npm run lint
 ```
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
